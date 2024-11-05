@@ -7,17 +7,7 @@ __all__ = ['DAG_UNet']
 
 
 def cosine_similarity_matrix(feature_map,threshold):
-    """
-    Computes a c x c cosine similarity matrix for each feature map in the batch.
-    Then, returns only the upper triangle (excluding the diagonal).
-    
-    Args:
-        feature_map (torch.Tensor): A tensor of shape (n, c, h, w) representing the feature maps.
-        
-    Returns:
-        torch.Tensor: A tensor of shape (n, c * (c - 1) / 2) containing the upper triangle (without diagonal)
-                      cosine similarity values for each sample in the batch.
-    """
+
     # Get the shape of the feature map
     n, c, h, w = feature_map.shape
     
@@ -51,20 +41,7 @@ import torch
 
 
 def select_top_channels(x, images, fraction):
-    """
-    Select channels from the images tensor based on the top values in the tensor `x`.
 
-    Args:
-    - x (torch.Tensor): A tensor of shape (batch_size, num_features).
-    - images (torch.Tensor): A batch of images of shape (batch_size, num_channels, height, width).
-    - fraction (float): The fraction of top values to select (default is 2/3).
-
-    Returns:
-    - selected_channels (torch.Tensor): A tensor of shape (batch_size, int(fraction * num_channels), height, width)
-      where `fraction * num_channels` are the selected channels based on the top values in `x`.
-    - unselected_channels (torch.Tensor): A tensor of the remaining unselected channels.
-    """
-    
     batch_size, num_channels, height, width = images.shape
     # Calculate how many channels to select based on the fraction
     num_select = int(fraction * num_channels)
