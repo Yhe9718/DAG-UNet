@@ -19,7 +19,7 @@ from monai.transforms import (
     ToTensord,
 )
 from torch.optim.lr_scheduler import StepLR
-from net import ULite
+from net import DAG_UNet
 from torch.nn.modules.loss import CrossEntropyLoss
 import argparse
 
@@ -360,9 +360,7 @@ for ind in range(1):
             cross_validation_dataset = ConcatDataset([cv_dataset_1, cv_dataset_2, cv_dataset_3, cv_dataset_4, cv_dataset_5])
             
 
-            model  = ULite(in_c=1,out_c=args.num_classes,threshold=args.threshold,frac=args.top_k).to(device)
-            
- 
+            model  = DAG_UNet(in_c=1,out_c=args.num_classes,threshold=args.threshold,frac=args.top_k).to(device)
             
             from torchinfo import summary
             #    summary(model, (1, 3, 352, 352))
