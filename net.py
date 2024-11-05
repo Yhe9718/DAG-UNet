@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-__all__ = ['ULite']
+__all__ = ['DAG_UNet']
 
 
 
@@ -252,7 +252,7 @@ class BottleNeckBlock(nn.Module):
 
 
 
-class ULite(nn.Module):
+class DAG_UNet(nn.Module):
     def __init__(self, in_c,out_c,threshold,frac):
         super().__init__()
 
