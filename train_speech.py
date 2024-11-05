@@ -85,11 +85,6 @@ def transformations(coordinates):
     left_parameters = [coordinates[0], coordinates[1]]
     fn_keys = ['img', 'seg']  
 
-    # Define transforms for image and segmentation, first is Rescale, second is RandomTranslation,
-    # third is RandomCrop, fourth is PadRotateAndCrop
-    #I MOOOST MAKE SURE THE CHANNEL STUFF IS CORRECT
-
-
     transform_1 = Compose([LoadImaged(keys=fn_keys, image_only=True),
                       AddChanneld(keys=fn_keys),
                        # SpatialCropd(fn_keys, roi_center = [left_parameters[0]+size_parameters[0]/2, left_parameters[1]+size_parameters[1]/2], roi_size = size_parameters),
