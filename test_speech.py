@@ -18,8 +18,6 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 no_classes = 7
 
-csv_name = '/home/ying/Downloads/colab(1).csv'
-
 no_epochs = 200
 k_folds = 5
 
