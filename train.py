@@ -21,7 +21,7 @@ import losses
 from dataset import Dataset
 from metrics import iou_score
 from utils import AverageMeter, str2bool
-from net import ULite
+from net import DAG_UNet
 
 
 ARCH_NAMES = archs.__all__
@@ -223,7 +223,7 @@ def main():
     #                                        config['input_channels'],
     #                                        config['deep_supervision'])
 
-    model = ULite(in_c=3,out_c=1,threshold=0.6,frac=0.8).cuda()
+    model = DAG_UNet(in_c=3,out_c=1,threshold=0.6,frac=0.8).cuda()
     model = model.cuda()
 
     params = filter(lambda p: p.requires_grad, model.parameters())
