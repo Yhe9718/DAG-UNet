@@ -17,7 +17,7 @@ from metrics import iou_score
 from utils import AverageMeter
 from albumentations import RandomRotate90,Resize
 import time
-from net import  ULite
+from net import  DAG_UNet
 
 
 def parse_args():
@@ -45,7 +45,7 @@ def main():
     cudnn.benchmark = True
 
     print("=> creating model %s" % config['arch'])
-    model = ULite(in_c=3,out_c=1,threshold=0.6,frac=0.8).cuda()
+    model = DAG_UNet(in_c=3,out_c=1,threshold=0.6,frac=0.8).cuda()
     model = model.cuda()
 
     # Data loading code
