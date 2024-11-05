@@ -12,7 +12,7 @@ from monai.metrics import DiceMetric, HausdorffDistanceMetric
 from monai.losses import DiceLoss
 from monai.data import (
     Dataset)
-from net import ULite
+from net import DAG_UNet
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -30,7 +30,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 EXPERIMENT_CODE = 1
 
 
-model = ULite(in_c=1,out_c=7,threshold=0.6,frac=0.8).cpu()
+model = DAG_UNet(in_c=1,out_c=7,threshold=0.6,frac=0.8).cpu()
 experiment_number = EXPERIMENT_CODE
 metric_values = list()
 metrics_list = []
