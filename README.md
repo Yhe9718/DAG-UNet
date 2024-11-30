@@ -23,11 +23,15 @@ For training speech, run ``` CUDA_VISIBLE_DEVICES=0 python test_speech.py ```
 
 For training BUSI, run ``` CUDA_VISIBLE_DEVICES=0 python val.py ```
 
-## Trained models
+## Testing with trained models
 
+### Trained model
 The `./models_pth/speech` directory contains trained models from the five-fold training on speech data
 
 The `./models_pth/busi` directory includes trained models for the BUSI dataset."
+
+### Testing
+Run ``` CUDA_VISIBLE_DEVICES=0 python val.py ```
 
 ## Acknowledgement
 
