@@ -54,8 +54,7 @@ def main():
 
     _, val_img_ids = train_test_split(img_ids, test_size=0.2, random_state=46)
 
-    model.load_state_dict(torch.load('model_pth/busi/model.pth' %
-                                     config['name']))
+    model.load_state_dict(torch.load('model_pth/busi/model.pth'))
     model.eval()
 
     val_transform = Compose([
