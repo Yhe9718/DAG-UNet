@@ -36,7 +36,7 @@ tes=['aa','ah','br','gc','mr']
 df=pd.DataFrame(columns=['Volunteer_test','Frame','Class','Dice','HD','Model'])
 for i in range(k_folds):
     test_vol=tes[i]
-    state_dict = torch.load(f'./model_pth/best_metric_model_{i}.pth')
+    state_dict = torch.load(f'./model_pth/speech/best_metric_model_{i}.pth')
     # Filter out unwanted keys
     filtered_state_dict = {k: v for k, v in state_dict.items() if "total_ops" not in k and "total_params" not in k}
 
