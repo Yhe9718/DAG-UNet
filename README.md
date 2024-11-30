@@ -35,4 +35,4 @@ Run ``` CUDA_VISIBLE_DEVICES=0 python val.py ```
 
 ## Acknowledgement
 
-We appreciate the work of [UNeXt](https://github.com/jeya-maria-jose/UNeXt-pytorch) ([paper](https://link.springer.com/chapter/10.1007/978-3-031-16443-9_3)) for providing the foundation of our framework.
+We appreciate the work of [UNeXt](https://github.com/jeya-maria-jose/UNeXt-pytorch) and [Ulite](https://github.com/duong-db/U-Lite) ([paper](https://ieeexplore.ieee.org/document/10317244)) for providing the foundation of our framework.
