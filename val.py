@@ -23,7 +23,7 @@ from net import  DAG_UNet
 def parse_args():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('--name', default='busi_UNext_woDS',
+    parser.add_argument('--name', default='busi_DAGUNet_woDS',
                         help='model name')
 
     args = parser.parse_args()
