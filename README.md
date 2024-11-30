@@ -3,7 +3,7 @@
 ## Data
 
 * Speech MRI Data - The data is available at [Zenodo](https://zenodo.org/records/10046815). The processed dataset in .npy form can be downloaded from [Google Drive](https://drive.google.com/file/d/1wT64P9YtIot7PrxMrnJRkXJ8T5sBSiWS/view?usp=sharing). Save the downloaded files to the same folder path as the code for training.
-* Busi Data - The data is available at [Kaggle](https://www.kaggle.com/datasets/aryashah2k/breast-ultrasound-images-dataset). Create a new folder named 'inputs', and keep the downloaded data to the folder. For data with more than one mask, we add the masks together.
+* BUSI Data - The data is available at [Kaggle](https://www.kaggle.com/datasets/aryashah2k/breast-ultrasound-images-dataset). Create a new folder named `inputs`, and keep the downloaded data to the folder. For data with more than one mask, we add the masks together.
 
 ## Training
 ```
@@ -21,13 +21,13 @@ cd into DAG-UNet
 
 For training speech, run ``` CUDA_VISIBLE_DEVICES=0 python test_speech.py ```
 
-For training Busi, run ``` CUDA_VISIBLE_DEVICES=0 python val.py ```
+For training BUSI, run ``` CUDA_VISIBLE_DEVICES=0 python val.py ```
 
 ## Trained models
 
-./model_pth provides the trained models for five folds training of the speech data.
+The './models_pth/speech' directory contains trained models from the five-fold training on speech data
 
-./models/busi
+The './models_pth/busi' directory includes trained models for the BUSI dataset."
 
 ## Acknowledgement
 
