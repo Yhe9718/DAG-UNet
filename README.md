@@ -23,6 +23,12 @@ For training speech, run ``` CUDA_VISIBLE_DEVICES=0 python test_speech.py ```
 
 For training Busi, run ``` CUDA_VISIBLE_DEVICES=0 python val.py ```
 
+## Trained models
+
+./model_pth provides the trained models for five folds training of the speech data.
+
+./models/busi
+
 ## Acknowledgement
 
 We appreciate the work of [UNeXt](https://github.com/jeya-maria-jose/UNeXt-pytorch) ([paper](https://link.springer.com/chapter/10.1007/978-3-031-16443-9_3)) for providing the foundation of our framework.
