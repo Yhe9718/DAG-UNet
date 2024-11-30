@@ -23,7 +23,7 @@ from net import  DAG_UNet
 def parse_args():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('--name', default='busi_DAGUNet_woDS',
+    parser.add_argument('--name', default='busi',
                         help='model name')
 
     args = parser.parse_args()
@@ -34,7 +34,7 @@ def parse_args():
 def main():
     args = parse_args()
 
-    with open('./models/%s/config.yml' % args.name, 'r') as f:
+    with open('./model_pth/%s/config.yml' % args.name, 'r') as f:
         config = yaml.load(f, Loader=yaml.FullLoader)
 
     print('-'*20)
@@ -54,7 +54,7 @@ def main():
 
     _, val_img_ids = train_test_split(img_ids, test_size=0.2, random_state=46)
 
-    model.load_state_dict(torch.load('models/%s/model.pth' %
+    model.load_state_dict(torch.load('model_pth/%s/model.pth' %
                                      config['name']))
     model.eval()
 
