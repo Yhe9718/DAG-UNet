@@ -19,9 +19,9 @@ For training Busi, run ``` CUDA_VISIBLE_DEVICES=0 python train.py ```
 cd into DAG-UNet
 ```
 
-For training speech, run ``` CUDA_VISIBLE_DEVICES=0 python test_speech.py ```
+For testing speech, run ``` CUDA_VISIBLE_DEVICES=0 python test_speech.py ```
 
-For training BUSI, run ``` CUDA_VISIBLE_DEVICES=0 python val.py ```
+For testing BUSI, run ``` CUDA_VISIBLE_DEVICES=0 python val.py ```
 
 ## Testing with trained models
 
